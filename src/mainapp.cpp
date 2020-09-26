@@ -15,6 +15,9 @@
 */
 
 #include "u-boot-env-mgr.hpp"
+
+#include <boost/asio/io_service.hpp>
+
 #include <phosphor-logging/log.hpp>
 
 int main()

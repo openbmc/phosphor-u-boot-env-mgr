@@ -19,6 +19,8 @@
 #include <phosphor-logging/elog-errors.hpp>
 #include <boost/process/child.hpp>
 #include <boost/process/io.hpp>
+#include <boost/asio/io_service.hpp>
+
 #include <vector>
 #include <unordered_map>
 #include <xyz/openbmc_project/Common/error.hpp>
