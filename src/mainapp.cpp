@@ -27,4 +27,6 @@ int main()
     UBootEnvMgr uBootEnvMgr(io, server, conn);
 
     io.run();
+
+    return 0;
 }
