@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 project(phosphor-u-boot-env-mgr CXX)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-rtti")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-rtti")
@@ -47,5 +47,13 @@ set(SERVICE_FILES
     )
 
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+install(FILES ${SERVICE_FILES} DESTINATION /lib/systemd/system/)
+
+
+## dmup this
+add_executable(iface-test src/iface-test.cpp)
+target_link_libraries(iface-test ${SDBUSPLUSPLUS_LIBRARIES})
+
+install(TARGETS iface-test DESTINATION bin)
 install(FILES ${SERVICE_FILES} DESTINATION /lib/systemd/system/)
 
