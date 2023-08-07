@@ -1,0 +1,7 @@
+Verified+1: OpenBMC CI <openbmcbump-ci@yahoo.com>
+Code-Review+2: Vernon Mauery <vernon.mauery@linux.intel.com>
+Submitted-by: Vernon Mauery <vernon.mauery@linux.intel.com>
+Submitted-at: Mon, 07 Aug 2023 21:03:21 +0000
+Reviewed-on: https://gerrit.openbmc.org/c/openbmc/phosphor-u-boot-env-mgr/+/65796
+Project: openbmc/phosphor-u-boot-env-mgr
+Branch: refs/heads/master
