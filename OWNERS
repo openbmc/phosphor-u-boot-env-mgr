@@ -35,6 +35,7 @@ owners:
 - vernon.mauery@linux.intel.com
 
 reviewers:
+- christopher.sides@hpe.com
 
 matchers:
 
@@ -42,3 +43,7 @@ openbmc:
 - name: Vernon Mauery
   email: vernon.mauery@linux.intel.com
   discord: vmauery
+  
+- name: Christopher Sides
+  email: christopher.sides@hpe.com
+  discord: citysides
