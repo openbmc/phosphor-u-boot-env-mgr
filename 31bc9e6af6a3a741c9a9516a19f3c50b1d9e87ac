@@ -16,6 +16,24 @@
       "message": "If/when I\u0027m accepted as a reviewer for this repo, I was thinking about getting a feel for the \u0027reviewer\u0027 role by submitting a change converting this repo from building with cmakelists to using meson.\n\nThe primary reasoning behind this change would be:\n\n1) This seems to be one of the last OBMC repos that isn\u0027t using Meson. I have the impression that CMakeLists is more generally complex and more powerful, but Meson is considered to be \u0027easier\u0027 to quickly understand or modify, and converting would bring this repo in line with other OBMC repos.\n\n2) to get a feel for the process of reviewing things (since I don\u0027t have the impression this repo normally has much added to it)\n\nI expect to have other \u0027guest reviewers\u0027 from HPE to look over any changes submitted to start. \n\nIf you have other suggestions for \u0027nice to have, but never got around to it\u0027 changes for this repo to get a feel for things, I would be very open to them.\n\nIn the future (once the design doc linked in the commit message gets a +2), I expect to submit a gerrit change with a demon, and I suspect we\u0027ll see comments from some of the folks (like Ed Tanous) who submitted comments to the design doc.",
       "revId": "31bc9e6af6a3a741c9a9516a19f3c50b1d9e87ac",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c5adb55_7395ae3a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-04-15T20:45:51Z",
+      "side": 1,
+      "message": "Based on have discussed the topic with Ed in weeks previous, I have the impression that if I\u0027m accepted from reviewer -\u003e maintainer, it would likely be after the design doc + daemon (hosted from phsophor-u-boot-env-mgr) have both been accepted and merged.\n\nI\u0027m open to further discussion here, or by email, or by discord.",
+      "parentUuid": "1412e5d5_036c983b",
+      "revId": "31bc9e6af6a3a741c9a9516a19f3c50b1d9e87ac",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }
