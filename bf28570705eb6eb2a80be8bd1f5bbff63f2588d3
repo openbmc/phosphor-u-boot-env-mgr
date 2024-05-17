@@ -16,6 +16,41 @@
       "message": "The new meson build scripts work when combined with a recipe, but just before uploading to gerrit, I discovered the local CI tool throws out errors along the lines of:\n\n/usr/local/include/boost/asio/io_context.hpp:19:0: information: Include file: \u003ccstddef\u003e not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]\n#include \u003ccstddef\u003e\n^\n/usr/local/include/boost/asio/io_context.hpp:20:0: information: Include file: \u003cstdexcept\u003e not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]\n#include \u003cstdexcept\u003e\n^\n\nwhen pointed at the repo. The \u0027errors\u0027 are all about unmodified code that\u0027s already in the repo. I plan to revsit these errors later, but didn\u0027t want them to stop me from putting the code up for review and discussion.",
       "revId": "bf28570705eb6eb2a80be8bd1f5bbff63f2588d3",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ea9b8c8_a381e687",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-05-17T20:57:02Z",
+      "side": 1,
+      "message": "Huh. Judging by the +1 for \u0027Verified\u0027, it looks like my local CI tools are throwing out errors the gerrit-based ones aren\u0027t. I\u0027ll have to investigate that on my end, looks like...",
+      "parentUuid": "1ae42004_f99a7266",
+      "revId": "bf28570705eb6eb2a80be8bd1f5bbff63f2588d3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "267e4055_29da01b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-05-17T20:57:02Z",
+      "side": 1,
+      "message": "A bit of additional justification for a \u0027cmake -\u003e meson\u0027 switch in the form of a TOF proposal (still open, but seemingly mostly in agreement re: general direction)\n\nhttps://github.com/openbmc/technical-oversight-forum/issues/4\n\nAmong the most recent comments in the thread:\n\"I would happy approve a \"Meson patches should be preferred to cmake and autotools\" vote,\"",
+      "revId": "bf28570705eb6eb2a80be8bd1f5bbff63f2588d3",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }
