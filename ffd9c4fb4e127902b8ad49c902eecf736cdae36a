@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36111bd2_f4843a2f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-05-17T21:23:55Z",
+      "side": 1,
+      "message": "How about add a \u0027Tested:\u0027 section with the output of a busctl introspect?",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3a2680c_c642e88b",
+        "filename": "include/devtree-nodesd.hpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-05-17T21:23:55Z",
+      "side": 1,
+      "message": "Can you still submit the D-Bus yaml for this interface in phosphor-dbus-interfaces?  that way it\u0027s documented.",
+      "range": {
+        "startLine": 25,
+        "startChar": 4,
+        "endLine": 25,
+        "endChar": 41
+      },
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}
