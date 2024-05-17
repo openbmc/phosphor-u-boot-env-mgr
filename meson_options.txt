@@ -1,0 +1,2 @@
+option('phosphor-u-boot-env-mgrd', type: 'feature', value: 'enabled', description: 'Enable u-Boot env vars -> D-Bus daemon',)
+option('devtree-nodesd', type: 'feature', value: 'enabled', description: 'Enable device-tree nodes -> D-Bus daemon',)
