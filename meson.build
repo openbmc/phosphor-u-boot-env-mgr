@@ -19,20 +19,13 @@ add_project_arguments('-Wno-psabi',          	#no idea what this line is about o
     '-DBOOST_ASIO_DISABLE_THREADS',
  language: 'cpp')
 
-boost = dependency('boost', version: '>=1.75.0', include_type: 'system', required : true)
 sdbusplus = dependency('sdbusplus', include_type: 'system', required : true)
 dbusinterface = dependency('phosphor-dbus-interfaces', include_type: 'system', required : true)
-phosphor_logging_dep = dependency('phosphor-logging', required : true)
 
 default_deps =[
-	boost,
-	phosphor_logging_dep,
 	sdbusplus,
 	dbusinterface,
 	]
-	
-incdir = include_directories('include')
 
 subdir('src')
-subdir('include')
 subdir('service_files')
