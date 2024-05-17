@@ -6,15 +6,14 @@ systemd_system_unit_dir = systemd.get_variable(
 
 unit_files = [
     ['phosphor-u-boot-env-mgrd', 'xyz.openbmc_project.U_Boot.Environment.Manager.service'],
+    ['dt-vpd-parsed', 'xyz.openbmc_project.DeviceTree.VPD.Parser.service'],
 ]
 
 fs = import('fs')
 foreach tuple : unit_files
-    if get_option(tuple[0]).allowed()
         fs.copyfile(
             tuple[1],
             install: true,
             install_dir: systemd_system_unit_dir,
         )
-    endif
 endforeach
