@@ -30,9 +30,6 @@ default_deps =[
 	sdbusplus,
 	dbusinterface,
 	]
-	
-incdir = include_directories('include')
 
 subdir('src')
-subdir('include')
 subdir('service_files')
