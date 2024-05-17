@@ -15,13 +15,15 @@
 */
 
 #include "u-boot-env-mgr.hpp"
-#include <phosphor-logging/log.hpp>
-#include <phosphor-logging/elog-errors.hpp>
+
 #include <boost/process/child.hpp>
 #include <boost/process/io.hpp>
-#include <vector>
-#include <unordered_map>
+#include <phosphor-logging/elog-errors.hpp>
+#include <phosphor-logging/log.hpp>
 #include <xyz/openbmc_project/Common/error.hpp>
+
+#include <unordered_map>
+#include <vector>
 
 template <typename... ArgTypes>
 static std::vector<std::string> executeCmd(const char* path,
@@ -75,8 +77,8 @@ UBootEnvMgr::UBootEnvMgr(boost::asio::io_service& io_,
 
     iface->register_method(
         "Write", [this](const std::string& key, const std::string& value) {
-            writeVariable(key, value);
-        });
+        writeVariable(key, value);
+    });
     iface->initialize(true);
 }
 

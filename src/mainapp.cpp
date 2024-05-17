@@ -15,6 +15,7 @@
 */
 
 #include "u-boot-env-mgr.hpp"
+
 #include <phosphor-logging/log.hpp>
 
 int main()
