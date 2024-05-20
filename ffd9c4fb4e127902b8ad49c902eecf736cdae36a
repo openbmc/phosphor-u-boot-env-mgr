@@ -196,6 +196,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "59f67e16_bdd8f905",
+        "filename": "service_files/xyz.openbmc_project.U_Boot.Environment.DevTreeNodesd.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-05-20T19:28:07Z",
+      "side": 1,
+      "message": "\u003e You\u0027re asking why I specified BusName\u003dxyz.openbmc_project.MachineContext in the servicefile instead of something like phosphor-u-boot-env-devtree-nodesd, right?\n\nUsually the BusName \u003d\u003d the name of the service file, so this file would be named xyz.openbmc_project.MachineContext.service.",
+      "parentUuid": "476edc8a_4c1fad94",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1e95015a_caca1da2",
         "filename": "src/devtree-nodesd.cpp",
         "patchSetId": 1
