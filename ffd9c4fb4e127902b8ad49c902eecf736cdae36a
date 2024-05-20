@@ -39,6 +39,81 @@
       },
       "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fbf975e_fe2ea162",
+        "filename": "include/devtree-nodesd.hpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2024-05-20T00:33:48Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "e3a2680c_c642e88b",
+      "range": {
+        "startLine": 25,
+        "startChar": 4,
+        "endLine": 25,
+        "endChar": 41
+      },
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e9b6486_35481339",
+        "filename": "include/meson.build",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2024-05-20T00:33:48Z",
+      "side": 1,
+      "message": "Why? This isn\u0027t a library, is it?\n\nPerhaps we can address this anti-pattern as part of the cleanups: [Placing internal headers in a parallel subtree](https://github.com/openbmc/docs/blob/master/anti-patterns.md#placing-internal-headers-in-a-parallel-subtree)",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67d93412_6cae3327",
+        "filename": "service_files/xyz.openbmc_project.U_Boot.Environment.DevTreeNodesd.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2024-05-20T00:33:48Z",
+      "side": 1,
+      "message": "Why something different from the service name?",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e95015a_caca1da2",
+        "filename": "src/devtree-nodesd.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2024-05-20T00:33:48Z",
+      "side": 1,
+      "message": "Given this is fairly isolated, it would be good to see this implemented with the sdbusplus async APIs rather than the ASIO APIs.\n\nI\u0027ve added Patrick to Reviewers to provide some feedback here.",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }
