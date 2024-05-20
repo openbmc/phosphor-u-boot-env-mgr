@@ -20,6 +20,41 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7bf9f1ae_0d5e7b73",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-05-20T14:59:30Z",
+      "side": 1,
+      "message": "That sounds like a great idea. I\u0027ll aim to include this in the next draft.",
+      "parentUuid": "36111bd2_f4843a2f",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1e094e9_ee98b33d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-05-20T14:59:30Z",
+      "side": 1,
+      "message": "Thanks for looking this stuff over and offering suggestions, folks!",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e3a2680c_c642e88b",
         "filename": "include/devtree-nodesd.hpp",
         "patchSetId": 1
@@ -67,6 +102,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3be4c42f_2eccac13",
+        "filename": "include/devtree-nodesd.hpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-05-20T14:59:30Z",
+      "side": 1,
+      "message": "Can do, especially since it seems like the \u0027MachineContext\u0027 interface name is going over better than previous suggestions did.",
+      "parentUuid": "6fbf975e_fe2ea162",
+      "range": {
+        "startLine": 25,
+        "startChar": 4,
+        "endLine": 25,
+        "endChar": 41
+      },
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7e9b6486_35481339",
         "filename": "include/meson.build",
         "patchSetId": 1
@@ -78,6 +137,24 @@
       "writtenOn": "2024-05-20T00:33:48Z",
       "side": 1,
       "message": "Why? This isn\u0027t a library, is it?\n\nPerhaps we can address this anti-pattern as part of the cleanups: [Placing internal headers in a parallel subtree](https://github.com/openbmc/docs/blob/master/anti-patterns.md#placing-internal-headers-in-a-parallel-subtree)",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "76b5594d_d817662b",
+        "filename": "include/meson.build",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-05-20T14:59:30Z",
+      "side": 1,
+      "message": "Thanks for the link to explain the issue! \n\nI believe the usage of the /include directory was part of the original phosphor-u-boot-env-mgr structure, and it hadn\u0027t occurred to me to change it.\n\nI\u0027ll remove the /include directory in the next revision.",
+      "parentUuid": "7e9b6486_35481339",
       "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -101,6 +178,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "476edc8a_4c1fad94",
+        "filename": "service_files/xyz.openbmc_project.U_Boot.Environment.DevTreeNodesd.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-05-20T14:59:30Z",
+      "side": 1,
+      "message": "You\u0027re asking why I specified BusName\u003dxyz.openbmc_project.MachineContext in the servicefile instead of something like phosphor-u-boot-env-devtree-nodesd, right?\n\nIn the case of the pre-existing phosphor-u-boot-env-mgr daemon, the daemon has functions accessible through the d-bus interface, so it has its own bus on d-bus.\n\nThe new devtree-nodesd daemon has no user-callable functions - it just reads nodes then writes data to the MachineContext interface, so it doesn\u0027t have its \u0027own\u0027 bus on d-bus. That was my reasoning, at least.\n\nI specified MachineContext for BusName in the service file here because that lets it use the appearance of the MachineContext bus to signal that the service has successfully done what it needs to do (otherwise it\u0027ll think the d-bus service failed to start, timeout, then remove the MachineContext bus and any included data a shortly after boot).",
+      "parentUuid": "67d93412_6cae3327",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1e95015a_caca1da2",
         "filename": "src/devtree-nodesd.cpp",
         "patchSetId": 1
@@ -112,6 +207,24 @@
       "writtenOn": "2024-05-20T00:33:48Z",
       "side": 1,
       "message": "Given this is fairly isolated, it would be good to see this implemented with the sdbusplus async APIs rather than the ASIO APIs.\n\nI\u0027ve added Patrick to Reviewers to provide some feedback here.",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f7cb919_829534fd",
+        "filename": "src/devtree-nodesd.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-05-20T14:59:30Z",
+      "side": 1,
+      "message": "That isn\u0027t something I had considered, but Ian Woloschin (just added as a reviewer) was in agreement when I discussed this Gerrit review with him.\n\nI\u0027ll go ahead and start looking into doing this for the next draft.",
+      "parentUuid": "1e95015a_caca1da2",
       "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
