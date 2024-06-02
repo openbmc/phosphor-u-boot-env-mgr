@@ -53,6 +53,23 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a965b40_4b067840",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001352
+      },
+      "writtenOn": "2024-06-02T22:56:55Z",
+      "side": 1,
+      "message": "Currently traveling across Asia, will be back to focusing on this probably the last week on June. Thanks again for the help looking over this stuff, folks!",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e3a2680c_c642e88b",
@@ -243,6 +260,24 @@
       "side": 1,
       "message": "That isn\u0027t something I had considered, but Ian Woloschin (just added as a reviewer) was in agreement when I discussed this Gerrit review with him.\n\nI\u0027ll go ahead and start looking into doing this for the next draft.",
       "parentUuid": "1e95015a_caca1da2",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b121dc4_14075d8c",
+        "filename": "src/devtree-nodesd.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1001352
+      },
+      "writtenOn": "2024-06-02T22:56:55Z",
+      "side": 1,
+      "message": "Quick note (Chris Sides, different account here): I was hoping to have this worked out the other week before going out the door, but didn\u0027t manage to finish before heading a month long trip across Asia.\n\nI didn\u0027t bring authenticators for my work accounts with me, hence the alternative github account...\n\nAnyways, thanks again for the advice everyone, and I\u0027ll be back to working on this once I\u0027m back in the US towards the end of June.",
+      "parentUuid": "2f7cb919_829534fd",
       "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
