@@ -54,6 +54,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "572ebfd1_f646f517",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2024-08-02T18:20:03Z",
+      "side": 1,
+      "message": "Yea, looks like that is why it failed.  It even suggested a fix, in this case the triple quotes:\n\n-: UC1 Line exceeds max length (90\u003e72).\n    It\u0027s possible you intended to use one of the following exceptions:\n    1. Put logs or shell script in a quoted section with triple quotes (\u0027\u0027\u0027)\n        before and after the section\n    2. Put a long link at the bottom in a footnote.\n        example: [1] https://my_long_link.com",
+      "parentUuid": "4efb9a68_e68e84d5",
+      "revId": "ffd9c4fb4e127902b8ad49c902eecf736cdae36a",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "f1e094e9_ee98b33d",
