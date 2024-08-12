@@ -33,6 +33,24 @@
       "message": "After getting pushback re: adding custom interface \"xyz.openbmc_project.MachineContext,\" I have switched to leveraging already-existing interfaces inventory.decorator.asset and inventory.item.networkinterface (using server_t to wrap the inheritances).\n\nThis service still intends to use path\n\"xyz.openbmc_project.MachineContext\"\n\nPlease use this space for further discussions of dbus interface or path usages",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a76d64d_e539daf2",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-12T21:54:39Z",
+      "side": 1,
+      "message": "correction: path xyz/openbmc_project/MachineContext",
+      "parentUuid": "86b03e06_27daefad",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }
