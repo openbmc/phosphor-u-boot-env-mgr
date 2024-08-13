@@ -16,6 +16,24 @@
       "message": "This probably needs to be a three-step process:\n1) add meson build support\n2) change the bitbake recipe to use meson\n3) remove cmake support",
       "revId": "516faacd7f8d224f15cc041cc486290b43cf4911",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0aec13b8_d0119466",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-13T22:33:46Z",
+      "side": 1,
+      "message": "Are there any existing recipes for this repo that need updating? I had the impression there was not when I searched @ github.com/openbmc/openbmc for references to it.\n\nIf I\u0027m remembering right, I ended up creating a recipe from scratch on my machine so I could \u0027devtool modify\u0027 and build the repo with CMakeLists -- then changed it to use meson and confirmed it worked before pushing this commit to Gerrit.\n\nI figured the meson recipe I put together would be the last thing pushed (once the meson changes to this repo are accepted), since a recipe for this repo doesn\u0027t exist yet and isn\u0027t referenced by any existing platforms in openbmc/openbmc as far as I know.",
+      "parentUuid": "60a9f276_2487f701",
+      "revId": "516faacd7f8d224f15cc041cc486290b43cf4911",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }
