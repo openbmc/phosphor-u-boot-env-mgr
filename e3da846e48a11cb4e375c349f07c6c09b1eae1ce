@@ -1,6 +1,40 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "77e3b528_5781e9ec",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "if this is read only ROM then only one of these should be supplied, the factory assigned one not the locally assignable in use one.   I always forget which is which.\n\n\nor did I misunderstand and this is the MAC assigned to the server (host) and not the management controller (BMC)?",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "788ed8e4_5b6532c0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "why are these writable?    because the pdi binding says so?    what happens when a write is attempted?   crash?  ignore?   error?\n\nadd to testing.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "e5703a78_f6c6b3f0",
@@ -73,6 +107,228 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0e31899b_9de4bba2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "\u003e on the basis that anything coming from device-tree is being passed in from u-boot from OBMC\u0027s perspective.\n\nfirst Uboot is just plumbing this is not touching the environment.   most of the device tree comes from the kernel source tree.   Should the initrd and kernel binary also be considered as coming from Uboot?\n\nWhile we could have chosen to place these attributes in the Uboot environment variables the review feedback was to use standard DTS properties spread across the existing nodes according to standard bindings with extension only when needed.\n\nSecond exposeing DTS properties which need to be interpreted as strings, byte arrays, and others raw binary data, is quite different from the Uboot environment which has a collection of name value pairs and are always strings.\n\n\nThis should be a new binary with it\u0027s own configuration file.   how it\u0027s hosted in which repository I\u0027ll defer.   (reads code)  Oh it is a separate binary but with a silly meaningless name.\n\n\nI have not yet reviewed the code especially for being general purpose.  (read code) \nok it\u0027s not general purpose and I made several other comments.",
+      "parentUuid": "c601d368_3a6a90d0",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f145d94_deab73b3",
+        "filename": "meson_options.txt",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "this is just meaningless addition of names.\n\ndrop u-boot-env it\u0027s meaningless and only specifies the repository not any function.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1920a7f7_de4b759e",
+        "filename": "service_files/meson.build",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "see above, rename.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd526584_abde37ea",
+        "filename": "service_files/meson.build",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "please add trailing new lines to source text files.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cdef8638_a39ae926",
+        "filename": "service_files/xyz.openbmc_project.MachineContext.service",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "from this description I thought it was serving both but it has an independent main.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f20b7284_8955010f",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "no subdirectories ?\n\nthe MAC address should be in the Ethernet device node not the machine top level.\n\nSeems like you would need to check compatible property to know which node to find.  that is a file with a series of NUL terminated strings.\n\nI was going to suggest looking at compatible to find the right node but realized a better solution is to define an alias and extract the device mode path from the string with NUL terminator under |/aliases/soc-ethernet` or whatever you choose (I\u0027d be ok with whatever DTS naming for the first Ethernet interface).",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3707b58c_7dc6f904",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "Hmmm I am not used to seeing cast near std:: pair usage.\n\nis this a cast only to confirm the type?",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b902b888_abbfc820",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "So we rely on std::getline to trim the NUL and only expect one string?",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eac9e115_f26b248f",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "same (getline)",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c76181ae_5238e83a",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "my understanding is to call format directly and not use stream operators.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27666a20_d9d6cb51",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "see avtif for host, but why is MAC address on the something to populate the chassis and not the BMC Ethernet?",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d78ca11_06df8025",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "no subdirectories \n\nthe MAC address should be in the Ethernet device node not the machine top level.\n\nI expect the DTS checker to complain about unknown binding for the properties.   except it\u0027s not in the version it sees.\n\nseems like you would need to check compatible property to know which node to find.  that is a file with a series of NUL terminated strings.\n\nor just hardcode the path since it\u0027s inside the soc, and would take configuration for the object to decorate.\n\nbetter would be to define an alias and read the device path from `/aliases/soc-etgernet`, trim the NUL from the string and open that relative path directory, optionally check compatible, then open the MAC address file.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be97511f_14c2c3ec",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "this file represents C thinking of a single header to configure the logic and define the parameters instead of C++ of defining a header to implement a class.\n\nthe supported paths and naming with a trailing d for daemon \nrepresent this.   place them in another file or move to the cpp.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "86b03e06_27daefad",
         "filename": "src/machinecontextd.hpp",
         "patchSetId": 6
@@ -102,6 +358,23 @@
       "side": 1,
       "message": "correction: path xyz/openbmc_project/MachineContext",
       "parentUuid": "86b03e06_27daefad",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08169524_7035424c",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-17T14:32:57Z",
+      "side": 1,
+      "message": "does this belong to the same object or is it just to avoid defining a second object path?",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
