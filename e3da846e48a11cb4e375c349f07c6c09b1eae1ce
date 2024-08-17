@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "beb473ff_ded08cf4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "No, you\u0027re correct. It\u0027s my understanding the \u0027local-mac-address\u0027 field is the first thing populated, and then the \u0027mac-address\u0027 node is populated only if a differing MAC is assigned after the initial one.\n\nhttps://devicetree-specification.readthedocs.io/en/v0.3/device-bindings.html#network-devices\n\nOriginally, I was planning to list both, but the next versions of the daemon will only have one (partially to better fit with the NetworkInterface dbus interface we\u0027re partially relying on now).",
+      "parentUuid": "77e3b528_5781e9ec",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "788ed8e4_5b6532c0",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
@@ -31,6 +49,24 @@
       "writtenOn": "2024-08-17T14:32:57Z",
       "side": 1,
       "message": "why are these writable?    because the pdi binding says so?    what happens when a write is attempted?   crash?  ignore?   error?\n\nadd to testing.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5145cd00_669c1776",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "\u003ebecause the pdi binding says so?\n\nYou are correct here. These properties were created via sdbusplus bindings being generated, and I had not considered the \"what happens if you try to write to them\" aspect.\n\nI\u0027ll look into this, thanks for calling it!",
+      "parentUuid": "788ed8e4_5b6532c0",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -125,6 +161,41 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "31452ac2_a857d330",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "\u003efirst Uboot is just plumbing this is not touching the environment\n\nI believe I understand your point.\n\nA bit of background \u0027point of interest\u0027 here is that HPE\u0027s current methodology is to have HW identifying VPD read from a secure element during boot, then an HPE-specific version of u-boot modifies the flat device tree to add in the discovered information -- and that\u0027s how it\u0027s made available to OBMC in HPE\u0027s case.\n\nThat said, there\u0027s no requirement for how that data is made available to the device tree for other platforms, and HPE\u0027s methodology may change again in the future (but probably won\u0027t anytime too soon).\n\n\u003eSecond exposeing DTS properties which need to be interpreted as strings, byte arrays, and others raw binary data, is quite different from the Uboot environment which has a collection of name value pairs and are always strings\n\nI\u0027ll keep this in mind. I actually need to update the \u0027tested\u0027 part of the commit, now that I look again. The latest commit of the code only creates one \u0027MAC\u0027 field instead of two now, and it\u0027s presented as a string displaying the hex values.\n\n\u003eit is a separate binary but with a silly meaningless name\n\nI\u0027ll consider some potentially more meaningful names for this daemon. Thanks a ton for all the input - some of it I\u0027ll need to return and reply to later.",
+      "parentUuid": "0e31899b_9de4bba2",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a890fae_e995365b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "I\u0027ll put together some updated code with an updated \u0027testing\u0027 section - plus I\u0027ve got a few more comments to come back and reply to later.\n\nThank you so much for taking the time to look over this stuff and offer suggestions, folks!",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0f145d94_deab73b3",
         "filename": "meson_options.txt",
         "patchSetId": 6
@@ -136,6 +207,24 @@
       "writtenOn": "2024-08-17T14:32:57Z",
       "side": 1,
       "message": "this is just meaningless addition of names.\n\ndrop u-boot-env it\u0027s meaningless and only specifies the repository not any function.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ae2f672_ae4a60ad",
+        "filename": "meson_options.txt",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "My reasoning here was that there was already a \u0027u-boot-env\u0027 daemon in this repo (even if no one was referring this repo due to lack of existing recipes), and I wanted to make it simple to decide which one(s) to have active if someone pulls this subproject into their build.\n\nBased on recent commentary from folks other than Ed Tanous (so far), it seems like we\u0027re moving towards maybe *not* hosting this daemon in this particular repo afterall...",
+      "parentUuid": "0f145d94_deab73b3",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -176,6 +265,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8c51e49d_6cc1622e",
+        "filename": "service_files/meson.build",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "Will do.",
+      "parentUuid": "dd526584_abde37ea",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "cdef8638_a39ae926",
         "filename": "service_files/xyz.openbmc_project.MachineContext.service",
         "patchSetId": 6
@@ -210,6 +317,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "504ceb44_579827e1",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "All the nodes we care about for now are at the device-tree root node level.\n\nThere\u0027s effectively a hardcoded list of paths to supported nodes, with the idea that it could be possible to pull data from deeper paths in the future if the community wants to.",
+      "parentUuid": "f20b7284_8955010f",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3707b58c_7dc6f904",
         "filename": "src/machinecontextd.cpp",
         "patchSetId": 6
@@ -221,6 +346,24 @@
       "writtenOn": "2024-08-17T14:32:57Z",
       "side": 1,
       "message": "Hmmm I am not used to seeing cast near std:: pair usage.\n\nis this a cast only to confirm the type?",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80932d0d_c083c9a6",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "Correct. The cast is not required - I added it hoping it would make what\u0027s being done more clear to anyone reading the code.",
+      "parentUuid": "3707b58c_7dc6f904",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -295,6 +438,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d3de0606_b6466259",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "\u003esee avtif for host\n\nCan you clarify what this means?\n\n\u003ewhy is MAC address on the something to populate the chassis\n\nThe \u0027MAC-Address\u0027 and \u0027Local-MAC-Address\u0027 fields were both originally included due community discussions as \u0027low hanging fruit\u0027 since this data about the system OBMC is booting on can be obtained through root nodes in device-tree\n\nhttps://devicetree-specification.readthedocs.io/en/v0.3/device-bindings.html#network-devices",
+      "parentUuid": "27666a20_d9d6cb51",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2d78ca11_06df8025",
         "filename": "src/machinecontextd.hpp",
         "patchSetId": 6
@@ -306,6 +467,24 @@
       "writtenOn": "2024-08-17T14:32:57Z",
       "side": 1,
       "message": "no subdirectories \n\nthe MAC address should be in the Ethernet device node not the machine top level.\n\nI expect the DTS checker to complain about unknown binding for the properties.   except it\u0027s not in the version it sees.\n\nseems like you would need to check compatible property to know which node to find.  that is a file with a series of NUL terminated strings.\n\nor just hardcode the path since it\u0027s inside the soc, and would take configuration for the object to decorate.\n\nbetter would be to define an alias and read the device path from `/aliases/soc-etgernet`, trim the NUL from the string and open that relative path directory, optionally check compatible, then open the MAC address file.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce9da5a2_7c2eda79",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "I",
+      "parentUuid": "2d78ca11_06df8025",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -375,6 +554,24 @@
       "writtenOn": "2024-08-17T14:32:57Z",
       "side": 1,
       "message": "does this belong to the same object or is it just to avoid defining a second object path?",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "813e4109_c7b90e35",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-17T16:10:58Z",
+      "side": 1,
+      "message": "It\u0027s all intended to describe the same physical object overall - it\u0027s all supposed to be data giving context for the board OBMC is running on (\u0027model id\u0027 is the data HPE needs to key off. The rest is just added as \u0027low hanging fruit\u0027 for a device-tree -\u003e dbus daemon based on previous community discussions)",
+      "parentUuid": "08169524_7035424c",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
