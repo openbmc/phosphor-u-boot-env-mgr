@@ -335,6 +335,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "03d28cd5_85febd4f",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-21T20:42:32Z",
+      "side": 1,
+      "message": "my question was more are the Ethernet mac for the host or for the soc, in which case it should be in the dt node for the hardware which will have its own binding and attachment points with eg reg and other resources depending on how it\u0027s addressed.\n\n\nso not where did you place them in your prototyping but where do they belong,",
+      "parentUuid": "504ceb44_579827e1",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3707b58c_7dc6f904",
         "filename": "src/machinecontextd.cpp",
         "patchSetId": 6
@@ -364,6 +382,24 @@
       "side": 1,
       "message": "Correct. The cast is not required - I added it hoping it would make what\u0027s being done more clear to anyone reading the code.",
       "parentUuid": "3707b58c_7dc6f904",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf1a7217_c9983076",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000021
+      },
+      "writtenOn": "2024-08-21T20:42:32Z",
+      "side": 1,
+      "message": "personally I think the enum values having the class is enough of a hint and the pair type is created in the context so the cast is more jarring and I then have to figure out that it\u0027s a noo.   \n\nbut I\u0027m just a novice reviewer of C++ not an experienced C++ developer.",
+      "parentUuid": "80932d0d_c083c9a6",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
