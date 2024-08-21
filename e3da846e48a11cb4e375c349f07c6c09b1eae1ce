@@ -196,6 +196,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4d871b63_f6279be0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-21T21:30:34Z",
+      "side": 1,
+      "message": "A proposal has been added to TOF to create a new dedicated repo for this service\n\nhttps://github.com/openbmc/technical-oversight-forum/issues/38",
+      "parentUuid": "31452ac2_a857d330",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0f145d94_deab73b3",
         "filename": "meson_options.txt",
         "patchSetId": 6
@@ -353,6 +371,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7c2eb910_3a56a456",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-21T21:30:34Z",
+      "side": 1,
+      "message": "Thanks - you\u0027ve got a point I hadn\u0027t fully considered til now -- namely that \u0027model\u0027 and \u0027serial-number\u0027 are root nodes expected to appear on the root level of the DT, but \u0027mac-address\u0027 is a device binding, and likely won\u0027t \u0027naturally\u0027 appear at the root level when a node isn\u0027t explicitly/manually defined (which had been done for testing purposes).\n\nSince MAC-Address isn\u0027t a critical field, so I\u0027ll do some looking into if I should update how it\u0027s handled in the short term, or if I should just remove it entirely for now.",
+      "parentUuid": "03d28cd5_85febd4f",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "3707b58c_7dc6f904",
         "filename": "src/machinecontextd.cpp",
         "patchSetId": 6
@@ -406,6 +442,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "dd67cd07_e412867c",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-21T21:30:34Z",
+      "side": 1,
+      "message": "Good info to consider, thanks!",
+      "parentUuid": "cf1a7217_c9983076",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b902b888_abbfc820",
         "filename": "src/machinecontextd.cpp",
         "patchSetId": 6
@@ -417,6 +471,24 @@
       "writtenOn": "2024-08-17T14:32:57Z",
       "side": 1,
       "message": "So we rely on std::getline to trim the NUL and only expect one string?",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a90164d1_1a1300cc",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-21T21:30:34Z",
+      "side": 1,
+      "message": "Does this seem like a bad assumption when reading from device tree nodes? \n\nIn my (admittedly limited, so far) experience, DT nodes populated with string data tend to include one line of text that can be read in this way without throwing errors.",
+      "parentUuid": "b902b888_abbfc820",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -451,6 +523,24 @@
       "writtenOn": "2024-08-17T14:32:57Z",
       "side": 1,
       "message": "my understanding is to call format directly and not use stream operators.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fb12979_59d6274c",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-21T21:30:34Z",
+      "side": 1,
+      "message": "I\u0027ll keep this in mind for the next update, thanks!",
+      "parentUuid": "c76181ae_5238e83a",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -527,6 +617,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0c0de49c_35581540",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-21T21:30:34Z",
+      "side": 1,
+      "message": "I will keep this in mind for the next update re: MAC address, thanks!",
+      "parentUuid": "ce9da5a2_7c2eda79",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "be97511f_14c2c3ec",
         "filename": "src/machinecontextd.hpp",
         "patchSetId": 6
@@ -538,6 +646,24 @@
       "writtenOn": "2024-08-17T14:32:57Z",
       "side": 1,
       "message": "this file represents C thinking of a single header to configure the logic and define the parameters instead of C++ of defining a header to implement a class.\n\nthe supported paths and naming with a trailing d for daemon \nrepresent this.   place them in another file or move to the cpp.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74ccc703_c3c83882",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-08-21T21:30:34Z",
+      "side": 1,
+      "message": "I honestly hadn\u0027t thought much about C vs C++ header file intentions before now, but I\u0027m doing some reading up now.\n\nTo clarify: are you recommending just moving the \u0027node_paths\u0027 and \u0027SupportedNodes\u0027 declarations to the cpp, or are you recommending going further?",
+      "parentUuid": "be97511f_14c2c3ec",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
