@@ -36,6 +36,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "66464d0e_fc53e6b3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-09T18:17:39Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "beb473ff_ded08cf4",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "788ed8e4_5b6532c0",
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "\u003ebecause the pdi binding says so?\n\nYou are correct here. These properties were created via sdbusplus bindings being generated, and I had not considered the \"what happens if you try to write to them\" aspect.\n\nI\u0027ll look into this, thanks for calling it!",
       "parentUuid": "788ed8e4_5b6532c0",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f452119d_90b9b78a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-09T18:17:39Z",
+      "side": 1,
+      "message": "I have confirmed that writing to a \u0027writable\u0027 field will change the value for the D-Bus property. The change will fire an \u0027updated\u0027 event so that the change will be caught by any Entity-Manager probes watching those properties. \n\nThe underlying device-tree node remains unchanged.\n\nLooking around in OBMC\u0027s phosphor-dbus-interface YAMLs, I have the impression \u0027read-only\u0027 only exists as a for-users text descriptor on SBusPlus-generated properties, and is not enforced in SDBusPlus code.",
+      "parentUuid": "5145cd00_669c1776",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -208,6 +244,24 @@
       "side": 1,
       "message": "A proposal has been added to TOF to create a new dedicated repo for this service\n\nhttps://github.com/openbmc/technical-oversight-forum/issues/38",
       "parentUuid": "31452ac2_a857d330",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1aed767d_e3f1d0bd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-09T18:17:39Z",
+      "side": 1,
+      "message": "At this point, I\u0027m expecting this code will be hosted in it\u0027s own repo, not in phosphor-u-boot-env-mgr.\n\nSince the proposed repo doesn\u0027t exist yet, I\u0027ll continue to update this code in respond to commentary with no expectation of getting more than +1s from folks.\n\nWhen the new repo is created, a new PR will be created and this will be closed.",
+      "parentUuid": "4d871b63_f6279be0",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -387,6 +441,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7824dae4_f7b04f24",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-09T18:17:39Z",
+      "side": 1,
+      "message": "MAC address field will be removed for now.",
+      "parentUuid": "7c2eb910_3a56a456",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3707b58c_7dc6f904",
@@ -454,6 +526,24 @@
       "side": 1,
       "message": "Good info to consider, thanks!",
       "parentUuid": "cf1a7217_c9983076",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b596517_41f80f4f",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-09T18:17:39Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "dd67cd07_e412867c",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -541,6 +631,24 @@
       "side": 1,
       "message": "I\u0027ll keep this in mind for the next update, thanks!",
       "parentUuid": "c76181ae_5238e83a",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee7b08f7_1eec6387",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-09T18:17:39Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "6fb12979_59d6274c",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -633,6 +741,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec23776c_afbba58a",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-09T18:17:39Z",
+      "side": 1,
+      "message": "I have removed MAC address handling at this time. There are no known consumers for the MAC data on d-bus at this time, and including it adds a fair bit of complexity.\n\nIt may be re-added in the future along with an option to add new nodes to watch via configuration files (which would make finding the data simpler anyways).",
+      "parentUuid": "0c0de49c_35581540",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "be97511f_14c2c3ec",
@@ -664,6 +790,24 @@
       "side": 1,
       "message": "I honestly hadn\u0027t thought much about C vs C++ header file intentions before now, but I\u0027m doing some reading up now.\n\nTo clarify: are you recommending just moving the \u0027node_paths\u0027 and \u0027SupportedNodes\u0027 declarations to the cpp, or are you recommending going further?",
       "parentUuid": "be97511f_14c2c3ec",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2844c0eb_13b98cec",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-09T18:17:39Z",
+      "side": 1,
+      "message": "I\u0027ve gone ahead and reorganized things in response to this comment. Hopefully the structure makes more logical sense now.",
+      "parentUuid": "74ccc703_c3c83882",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },

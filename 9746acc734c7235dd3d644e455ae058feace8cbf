@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40be4a59_17817c8f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-09T18:17:39Z",
+      "side": 1,
+      "message": "We now expect to host this code in it\u0027s own repo, not in phosphor-u-boot-env-mgr -- but since the new repo doesn\u0027t exist, and folks have already made code-change suggestions, development will continue here until the new repo is available on Gerrit.",
+      "revId": "9746acc734c7235dd3d644e455ae058feace8cbf",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}
