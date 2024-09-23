@@ -301,6 +301,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2fa036f2_e3b46611",
+        "filename": "meson_options.txt",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-23T20:00:12Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "3ae2f672_ae4a60ad",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1920a7f7_de4b759e",
@@ -314,6 +332,24 @@
       "writtenOn": "2024-08-17T14:32:57Z",
       "side": 1,
       "message": "see above, rename.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b33b7199_a6f36b83",
+        "filename": "service_files/meson.build",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-23T20:00:12Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "1920a7f7_de4b759e",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -353,6 +389,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "af827f5b_21fd47a0",
+        "filename": "service_files/meson.build",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-23T20:00:12Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "8c51e49d_6cc1622e",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cdef8638_a39ae926",
@@ -366,6 +420,24 @@
       "writtenOn": "2024-08-17T14:32:57Z",
       "side": 1,
       "message": "from this description I thought it was serving both but it has an independent main.",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d4ffcdc_adbef146",
+        "filename": "service_files/xyz.openbmc_project.MachineContext.service",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-23T20:00:12Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "cdef8638_a39ae926",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -600,6 +672,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f676966_672d9eb6",
+        "filename": "src/machinecontextd.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-23T20:00:12Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "eac9e115_f26b248f",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c76181ae_5238e83a",
@@ -684,6 +774,24 @@
       "side": 1,
       "message": "\u003esee avtif for host\n\nCan you clarify what this means?\n\n\u003ewhy is MAC address on the something to populate the chassis\n\nThe \u0027MAC-Address\u0027 and \u0027Local-MAC-Address\u0027 fields were both originally included due community discussions as \u0027low hanging fruit\u0027 since this data about the system OBMC is booting on can be obtained through root nodes in device-tree\n\nhttps://devicetree-specification.readthedocs.io/en/v0.3/device-bindings.html#network-devices",
       "parentUuid": "27666a20_d9d6cb51",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28248395_c2436b65",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-23T20:00:12Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "d3de0606_b6466259",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
@@ -812,6 +920,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6909a44_d5ab638b",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-23T20:00:12Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "2844c0eb_13b98cec",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "86b03e06_27daefad",
@@ -847,6 +973,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "75059e71_a0ab7f70",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-23T20:00:12Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "8a76d64d_e539daf2",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "08169524_7035424c",
@@ -878,6 +1022,24 @@
       "side": 1,
       "message": "It\u0027s all intended to describe the same physical object overall - it\u0027s all supposed to be data giving context for the board OBMC is running on (\u0027model id\u0027 is the data HPE needs to key off. The rest is just added as \u0027low hanging fruit\u0027 for a device-tree -\u003e dbus daemon based on previous community discussions)",
       "parentUuid": "08169524_7035424c",
+      "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d3ac9c3_9123083b",
+        "filename": "src/machinecontextd.hpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-23T20:00:12Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "813e4109_c7b90e35",
       "revId": "e3da846e48a11cb4e375c349f07c6c09b1eae1ce",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }

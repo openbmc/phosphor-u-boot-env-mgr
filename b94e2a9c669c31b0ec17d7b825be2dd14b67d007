@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef3d23e9_7e237d8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-09-23T20:00:12Z",
+      "side": 1,
+      "message": "The code in revision is ultimately intended for a yet-to-be-created \u0027devicetree-vpd-parser\u0027 repo, and has had all u-boot-env-mgr code removed and the OWNERS file updated to reflect that.",
+      "revId": "b94e2a9c669c31b0ec17d7b825be2dd14b67d007",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}
