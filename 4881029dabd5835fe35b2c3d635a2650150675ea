@@ -1,0 +1,193 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b51930cf_5da1d566",
+        "filename": "src/dt-vpd-parsed.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-30T14:55:45Z",
+      "side": 1,
+      "message": "I\u0027d prefer to not have a magic path like this.  \n\nHow do we ensure this is not used except in entity-manager processing?  We probably want an entirely different object_path root similar to whatever fru-device uses.",
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "435ab93a_103a75b0",
+        "filename": "src/dt-vpd-parsed.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-30T14:55:45Z",
+      "side": 1,
+      "message": "Generally all dbus operations should be done in the ctx.spawn, but this is _probably_ ok.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 32
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34ca01d8_5acf8f3d",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-30T14:55:45Z",
+      "side": 1,
+      "message": "Why not just make this a `map\u003cstring, lambda\u003e`?\n\n```\n{ \"serial-number\", [\u0026this](auto v){ serial_number(v); } }\n```\n\nI suspect that will clean this up a lot because you eliminate all the enum conversion.",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 23
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4cd2e53e_70832a02",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-30T14:55:45Z",
+      "side": 1,
+      "message": "`const auto\u0026`\n\nAs written you\u0027re doing a conversion from iterator to value.\n\nOr better, use structured bindings:\n\n`auto\u0026 [node, relpath] : DTParse::node_rel_paths)`",
+      "range": {
+        "startLine": 44,
+        "startChar": 9,
+        "endLine": 44,
+        "endChar": 39
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "327bf249_de3189b8",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-30T14:55:45Z",
+      "side": 1,
+      "message": "Don\u0027t forward declare.",
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26be9a6a_458b30e5",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-30T14:55:45Z",
+      "side": 1,
+      "message": "And now you\u0027re doing yet another copy of this string (copy #3).",
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2aa347b2_dbf8704e",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-30T14:55:45Z",
+      "side": 1,
+      "message": "Can\u0027t you do open as part of the constructor on an ifstream?",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 40
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d804e98c_47b76930",
+        "filename": "src/machinecontext.hpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-30T14:55:45Z",
+      "side": 1,
+      "message": "nit: std::forward?",
+      "range": {
+        "startLine": 31,
+        "startChar": 33,
+        "endLine": 31,
+        "endChar": 37
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "291a729d_0c14edb6",
+        "filename": "src/meson.build",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-30T14:55:45Z",
+      "side": 1,
+      "message": "nit: no tabs.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 21
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    }
+  ]
+}
