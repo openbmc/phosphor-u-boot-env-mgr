@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ada19167_a2262fc5",
+        "filename": "src/dt-vpd-parsed.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-01T20:17:58Z",
+      "side": 1,
+      "message": "Understood. \n\nI\u0027m working on a version of this daemon that\u0027s its own package in the Entity-Manager recipe, and will take a good look at how fru-daemon\u0027s object path is being handled. I ran into some build issues making the changeover, but I\u0027m testing fixes now after it clicked that recipe !\u003d package and a bunch of things fell into place.\n\nI\u0027ll definitely be taking your other suggestions in account, thanks a ton for the writeup!",
+      "parentUuid": "b51930cf_5da1d566",
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "435ab93a_103a75b0",
         "filename": "src/dt-vpd-parsed.cpp",
         "patchSetId": 10
