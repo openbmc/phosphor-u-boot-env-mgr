@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e3c4a61_b9a3fb42",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:40:14Z",
+      "side": 1,
+      "message": "A new version of this daemon, incorporating the latest suggestions, will be submitted to Entity-Manager\u0027s Gerrit repo likely early next week - I\u0027m currently having a bit of local peer review done first.\n\nThe comments were great, and definitely reveled plenty of \"details I didn\u0027t know I didn\u0027t know.\" It all lead to some great learning and readings up - so thanks a million, folks!",
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b51930cf_5da1d566",
@@ -38,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7f443bc9_e3901ab7",
+        "filename": "src/dt-vpd-parsed.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:40:14Z",
+      "side": 1,
+      "message": "FruDevice uses /xyz/openbmc_project/FruDevice, so the new DT-VPD daemon now uses /xyz/openbmc_project/MachineContext\n\nThanks a million for the commentary, I got a ton of milage o",
+      "parentUuid": "ada19167_a2262fc5",
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "435ab93a_103a75b0",
         "filename": "src/dt-vpd-parsed.cpp",
         "patchSetId": 10
@@ -49,6 +84,30 @@
       "writtenOn": "2024-09-30T14:55:45Z",
       "side": 1,
       "message": "Generally all dbus operations should be done in the ctx.spawn, but this is _probably_ ok.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 32
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cc9042d_a7af3506",
+        "filename": "src/dt-vpd-parsed.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:40:14Z",
+      "side": 1,
+      "message": "I did some digging around at what different OBMC repos are doing, and some experimenting. \n\nShort ver: The setup seen here is based on the Async API examples in SDBusPlus repo @ https://github.com/openbmc/sdbusplus/blob/c012fde41552c478d45145b7c01db88df1070ff2/example/calculator-aserver.cpp#L10\n\nI ended up thinking it *probably* makes sense to leave it as-is if we dont\u0027 want to add extra complexity with declaring pointers for MachineContext and manager_t and passing those to a startup() method to be initialized through ctx.spawn().\n\n---Detailed reasoning below, not required reading :) ---\n\nWith almost no exception, usages I found of sdbusplus::server::manager_t in OBMC repos happened in main(). \n\nI assume it\u0027s done this way to avoid issues with the manager_t object going out of scope (as part of the manager constructor, a ref to a \u0027slot\u0027 member variable is saved to the ref\u0027d \u0027ctx\u0027 object),\n\nSimilarly, if the MachineContext object going out of scope once startup() finishes in ctx.spawn() breaks access to the d-bus object. I suspect that\u0027s part of the Async API.\n\nI know we could get around scope issues by declaring pointers in main and passing them to startup for init, but I didn\u0027t see any examples of anyone else doing that in OBMC, and suspect it\u0027s not worth the added complexity to folks.\n\nI\u0027m also thinking that in the manager_t and MachineContext usages of \u0027the sdbusplus::async::context\u0027 object, they\u0027re not directly doing anything with the object (like ctx.request_name()), but are passing it as a parameter to a parent class constructor. Not quite sure what happens with it after that, to be fair, but plan to do some more reading up.\n\nMy current suspicion is that with the sdbusplus Async API, nothing kicks off (other that the bus name request) until ctx.run() is called, but I haven\u0027t looked deeply there yet.",
+      "parentUuid": "435ab93a_103a75b0",
       "range": {
         "startLine": 8,
         "startChar": 0,
@@ -84,6 +143,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8e996ae5_ef213d78",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:40:14Z",
+      "side": 1,
+      "message": "You are right. That cleaned up a *ton*.",
+      "parentUuid": "34ca01d8_5acf8f3d",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 23
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4cd2e53e_70832a02",
         "filename": "src/machinecontext.cpp",
         "patchSetId": 10
@@ -95,6 +178,30 @@
       "writtenOn": "2024-09-30T14:55:45Z",
       "side": 1,
       "message": "`const auto\u0026`\n\nAs written you\u0027re doing a conversion from iterator to value.\n\nOr better, use structured bindings:\n\n`auto\u0026 [node, relpath] : DTParse::node_rel_paths)`",
+      "range": {
+        "startLine": 44,
+        "startChar": 9,
+        "endLine": 44,
+        "endChar": 39
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24b14e9e_afd19871",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:40:14Z",
+      "side": 1,
+      "message": "Great suggestion, I didn\u0027t even realize that was an option, but it really niced things up.\n\nAs a sidenote, I\u0027m making a point of brushing up on more modern c++ best practices by working my way through learncpp.com (saw it suggested a ton on Reddit for BP info). \n\nI *really* appreciate the comments you took the time to make, I feel like I got a lot of mileage out of them. With a bit of luck, future submissions will be a lot nicer for it - Thanks! :)",
+      "parentUuid": "4cd2e53e_70832a02",
       "range": {
         "startLine": 44,
         "startChar": 9,
@@ -122,6 +229,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "510a73a4_f518fa96",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:40:14Z",
+      "side": 1,
+      "message": "I\u0027ll be keeping this in mind where possible.",
+      "parentUuid": "327bf249_de3189b8",
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "26be9a6a_458b30e5",
@@ -139,6 +264,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb7165fd_7ece5c0c",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:40:14Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "26be9a6a_458b30e5",
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2aa347b2_dbf8704e",
@@ -152,6 +295,30 @@
       "writtenOn": "2024-09-30T14:55:45Z",
       "side": 1,
       "message": "Can\u0027t you do open as part of the constructor on an ifstream?",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 40
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69767c83_b97e9464",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:40:14Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "2aa347b2_dbf8704e",
       "range": {
         "startLine": 50,
         "startChar": 0,
@@ -187,6 +354,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9bfd1b67_cacd88f4",
+        "filename": "src/machinecontext.hpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:40:14Z",
+      "side": 1,
+      "message": "I got a *lot* of research/reading-up mileage out of this comment.\n\nAm I understanding correctly that ctx doesn\u0027t need that std::forward wrapper because it\u0027s being passed by reference, but in the case of \u0027path\u0027 we want to \u0027keep an lvalue as an lvalue\u0027 when the parameter is passed to the parent constructor?",
+      "parentUuid": "d804e98c_47b76930",
+      "range": {
+        "startLine": 31,
+        "startChar": 33,
+        "endLine": 31,
+        "endChar": 37
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "291a729d_0c14edb6",
         "filename": "src/meson.build",
         "patchSetId": 10
@@ -198,6 +389,30 @@
       "writtenOn": "2024-09-30T14:55:45Z",
       "side": 1,
       "message": "nit: no tabs.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 21
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5a7572c_f122bd5d",
+        "filename": "src/meson.build",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:40:14Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "291a729d_0c14edb6",
       "range": {
         "startLine": 2,
         "startChar": 0,
