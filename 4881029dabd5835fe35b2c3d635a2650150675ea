@@ -120,6 +120,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ecdde42d_5b22e968",
+        "filename": "src/dt-vpd-parsed.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-11T18:57:36Z",
+      "side": 1,
+      "message": "Correction: I mean that I currently have the impression that Async API interactions with D-Bus, once ctx.run() is called are:\n\n1) request a bus name with an async call\n\n2) sdbusplus async consume objects like MachineContext (paths included as part of that) that implement that SDBusPlus Async API and bind the result to the bus in 1)\n\nI feel like things in are becoming more clear re: OBMC D-Bus interactions, but I definitely still have some more learning to do here.",
+      "parentUuid": "1cc9042d_a7af3506",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 32
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "34ca01d8_5acf8f3d",
         "filename": "src/machinecontext.cpp",
         "patchSetId": 10
