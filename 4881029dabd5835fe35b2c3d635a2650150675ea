@@ -18,6 +18,23 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb8dab36_6f42ef1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-18T14:29:52Z",
+      "side": 1,
+      "message": "Replaced by:\n\n71512: service: device-tree node to d-bus for hw id data | https://gerrit.openbmc.org/c/openbmc/phosphor-u-boot-env-mgr/+/71512",
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b51930cf_5da1d566",
@@ -179,6 +196,54 @@
       "side": 1,
       "message": "You are right. That cleaned up a *ton*.",
       "parentUuid": "34ca01d8_5acf8f3d",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 23
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b8f0cac_83af30ff",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-18T14:29:52Z",
+      "side": 1,
+      "message": "Just an FYI, but the Entity-Manager + CI tool seems to want to",
+      "parentUuid": "8e996ae5_ef213d78",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 23
+      },
+      "revId": "4881029dabd5835fe35b2c3d635a2650150675ea",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "114f05c7_754d0947",
+        "filename": "src/machinecontext.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001354
+      },
+      "writtenOn": "2024-10-18T14:29:52Z",
+      "side": 1,
+      "message": "Interesting issue that\u0027s came up with the suggested structure: The code builds, but currently doesn\u0027t pass CI processes as I\u0027m trying to use it. \n\nSeems like the CI tool wants to declare anything with the the string,lambda map as \u0027static\u0027 which breaks the closure reference.\n\nhttps://gerrit.openbmc.org/c/openbmc/entity-manager/+/75349/1/src/machinecontext.cpp",
+      "parentUuid": "8e996ae5_ef213d78",
       "range": {
         "startLine": 34,
         "startChar": 0,
