@@ -20,7 +20,7 @@
 
 int main()
 {
-    boost::asio::io_service io;
+    boost::asio::io_context io;
     auto conn = std::make_shared<sdbusplus::asio::connection>(io);
     conn->request_name(uBootEnvMgrServiceName);
     sdbusplus::asio::object_server server(conn);
