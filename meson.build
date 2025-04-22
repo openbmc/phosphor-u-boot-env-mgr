@@ -4,7 +4,7 @@ project(
     default_options: [
         'warning_level=3',
         'werror=true',
-        'cpp_std=c++20',  #highly suspect there should be more entries tied to line 4-6 of CMakeLists.txt.old
+        'cpp_std=c++23',  #highly suspect there should be more entries tied to line 4-6 of CMakeLists.txt.old
     ],
     license: 'Apache-2.0',
     version: '0.1',
