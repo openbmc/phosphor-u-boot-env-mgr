@@ -5,7 +5,10 @@ systemd_system_unit_dir = systemd.get_variable(
 )
 
 unit_files = [
-    ['phosphor-u-boot-env-mgrd', 'xyz.openbmc_project.U_Boot.Environment.Manager.service'],
+    [
+        'phosphor-u-boot-env-mgrd',
+        'xyz.openbmc_project.U_Boot.Environment.Manager.service',
+    ],
 ]
 
 fs = import('fs')

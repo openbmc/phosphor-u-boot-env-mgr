@@ -76,8 +76,8 @@ UBootEnvMgr::UBootEnvMgr(boost::asio::io_context& io_,
 
     iface->register_method(
         "Write", [this](const std::string& key, const std::string& value) {
-        writeVariable(key, value);
-    });
+            writeVariable(key, value);
+        });
     iface->initialize(true);
 }
 
