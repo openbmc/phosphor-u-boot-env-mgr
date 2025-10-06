@@ -16,8 +16,8 @@
 
 #include "u-boot-env-mgr.hpp"
 
-#include <boost/process/child.hpp>
 #include <boost/process/io.hpp>
+#include <boost/process/v1/child.hpp>
 #include <phosphor-logging/elog-errors.hpp>
 #include <phosphor-logging/log.hpp>
 #include <xyz/openbmc_project/Common/error.hpp>
@@ -31,8 +31,8 @@ static std::vector<std::string> executeCmd(const char* path,
 {
     std::vector<std::string> stdOutput;
     boost::process::ipstream stdOutStream;
-    boost::process::child execProg(path, const_cast<char*>(tArgs)...,
-                                   boost::process::std_out > stdOutStream);
+    boost::process::v1::child execProg(path, const_cast<char*>(tArgs)...,
+                                       boost::process::std_out > stdOutStream);
     std::string stdOutLine;
 
     while (stdOutStream && std::getline(stdOutStream, stdOutLine) &&
