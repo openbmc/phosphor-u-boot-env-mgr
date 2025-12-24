@@ -61,8 +61,9 @@ static std::vector<std::string> executeCmd(const char* path,
 UBootEnvMgr::UBootEnvMgr(boost::asio::io_context& io_,
                          sdbusplus::asio::object_server& srv_,
                          std::shared_ptr<sdbusplus::asio::connection>& conn_) :
-    io(io_), server(srv_), conn(conn_)
+    server(srv_), conn(conn_)
 {
+    (void)io_; // ABI preserved; no longer stored as a member
     iface = server.add_interface(uBootEnvMgrPath, uBootEnvMgrIface);
     iface->register_method("ReadAll", [this]() { return readAllVariable(); });
     iface->register_method("Read", [this](const std::string& key) {
