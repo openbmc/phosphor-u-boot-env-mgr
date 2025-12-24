@@ -58,10 +58,10 @@ static std::vector<std::string> executeCmd(const char* path,
     return stdOutput;
 }
 
-UBootEnvMgr::UBootEnvMgr(boost::asio::io_context& io_,
+UBootEnvMgr::UBootEnvMgr(boost::asio::io_context&,
                          sdbusplus::asio::object_server& srv_,
                          std::shared_ptr<sdbusplus::asio::connection>& conn_) :
-    io(io_), server(srv_), conn(conn_)
+    server(srv_), conn(conn_)
 {
     iface = server.add_interface(uBootEnvMgrPath, uBootEnvMgrIface);
     iface->register_method("ReadAll", [this]() { return readAllVariable(); });
