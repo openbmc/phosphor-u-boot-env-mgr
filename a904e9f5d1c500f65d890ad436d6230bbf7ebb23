@@ -18,6 +18,24 @@
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "69e31ce0_2105496b",
+        "filename": "include/u-boot-env-mgr.hpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1002739
+      },
+      "writtenOn": "2026-04-30T12:10:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "249de845_effe1031",
+      "revId": "a904e9f5d1c500f65d890ad436d6230bbf7ebb23",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a24460be_9228e281",
@@ -31,6 +49,24 @@
       "writtenOn": "2026-04-14T16:10:15Z",
       "side": 1,
       "message": "I believe the easiest way to do this is just to take the name \u0027io_\u0027 out of the signature.",
+      "revId": "a904e9f5d1c500f65d890ad436d6230bbf7ebb23",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3daebe9_fd7dba0a",
+        "filename": "src/u-boot-env-mgr.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1002739
+      },
+      "writtenOn": "2026-04-30T12:10:59Z",
+      "side": 1,
+      "message": "Done — removed \u0027io\u0027 from the parameter name in the declaration.",
+      "parentUuid": "a24460be_9228e281",
       "revId": "a904e9f5d1c500f65d890ad436d6230bbf7ebb23",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
