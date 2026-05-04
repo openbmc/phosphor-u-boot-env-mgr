@@ -16,6 +16,24 @@
       "message": "remove the io_ name from here and there should not be a need to use the (void) below.",
       "revId": "0ab42a68213c7f314a0256164da5191ea77e3db8",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43c03b14_700487a1",
+        "filename": "src/u-boot-env-mgr.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1002739
+      },
+      "writtenOn": "2026-05-04T23:51:01Z",
+      "side": 1,
+      "message": "Done. Removed the \u0027io_\u0027 parameter name and the (void)io_; cast. The \nparameter is now unnamed as it\u0027s not used.",
+      "parentUuid": "760385c7_6335cc27",
+      "revId": "0ab42a68213c7f314a0256164da5191ea77e3db8",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4"
     }
   ]
 }
