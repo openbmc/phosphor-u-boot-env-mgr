@@ -1,0 +1,4 @@
+subprojects/*
+!subprojects/phosphor-dbus-interfaces.wrap
+!subprojects/phosphor-logging.wrap
+!subprojects/sdbusplus.wrap
